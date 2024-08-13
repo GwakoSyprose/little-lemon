@@ -107,7 +107,7 @@ fun Home(
                 modifier = Modifier
                     .weight(1f)
                     .size(50.dp)
-                    .clickable { goToProfile()}
+                    .clickable { goToProfile() }
             )
 
         }
@@ -196,7 +196,10 @@ fun HeroBanner(
                     tint = colorResource(id = R.color.primary1)
                 )
             },
-            placeholder = { Text("Enter search phrase") },
+            placeholder = {
+                Text(
+                    text = "Enter search phrase",
+                    color = Color.Gray )},
             maxLines = 1,
             singleLine = true,
             modifier = Modifier
@@ -217,8 +220,8 @@ private fun MenuCategories(
         Text(
             text = "ORDER FOR DELIVERY!",
             style = paragraphTitleTextStyle,
-            color = colorResource(R.color.primary1),
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 8.dp),
         )
         LazyRow(modifier = Modifier.fillMaxWidth()) {
             items(
@@ -226,7 +229,7 @@ private fun MenuCategories(
                 itemContent = { category ->
                     Button(
                         modifier = Modifier.padding(end = 8.dp),
-                        colors = ButtonDefaults.buttonColors(colorResource(id = R.color.highlight1)),
+                        colors = ButtonDefaults.buttonColors(Color.LightGray),
                         shape = RoundedCornerShape(20.dp),
                         onClick = { onFilter(category) }) {
                                 Text(
