@@ -47,6 +47,12 @@ val paragraphTitleTextStyle = TextStyle(
     fontSize = 20.sp,
     fontWeight = FontWeight.SemiBold
 )
+val normalTextStyle = TextStyle(
+    color = Black,
+    fontFamily = markaziTextFamily,
+    fontSize = 20.sp,
+    fontWeight = FontWeight.Normal
+)
 
 @Composable
 fun inputFieldTextStyle(): TextStyle {

@@ -11,11 +11,10 @@ import androidx.navigation.compose.composable
 import dev.syprosegwako.littlelemon.utils.PreferencesManager
 
 @Composable
-fun Navigation(navController: NavHostController, modifier: Modifier){
+fun Navigation(navController: NavHostController, items: List<MenuItemRoom>,  modifier: Modifier){
 
     val context = LocalContext.current
     val preferencesManager = remember { PreferencesManager(context) }
-    preferencesManager.clearAllData()
 
     val firstname = preferencesManager.getData("FIRST_NAME", "")
     val startDestination = if(firstname.isBlank()) Onboarding.route else Home.route
@@ -26,7 +25,7 @@ fun Navigation(navController: NavHostController, modifier: Modifier){
         }
 
         composable(Home.route){
-            Home(navController)
+            Home(navController, items)
         }
 
         composable(Profile.route){
