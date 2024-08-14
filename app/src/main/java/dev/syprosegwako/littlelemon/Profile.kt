@@ -42,7 +42,7 @@ fun Profile(navController: NavController){
         Modifier
             .fillMaxSize()
             .background(color = Color.White)
-            .padding(40.dp)
+            .padding(vertical = 40.dp)
     ) {
         //logo
         Logo(modifier = Modifier.align(Alignment.CenterHorizontally))
@@ -53,7 +53,7 @@ fun Profile(navController: NavController){
             textAlign = TextAlign.Start,
             style = paragraphTitleTextStyle,
             color = colorResource(id = R.color.black),
-            modifier = Modifier.padding(vertical = 40.dp)
+            modifier = Modifier.padding(40.dp)
 
         )
         //form
@@ -83,7 +83,7 @@ fun Profile(navController: NavController){
         Button(
             colors = ButtonDefaults.buttonColors(colorResource(id = R.color.primary2)),
             shape = RoundedCornerShape(8.dp),
-            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+            modifier = Modifier.fillMaxWidth().padding(40.dp),
             onClick = { logOut() }
         )
         {

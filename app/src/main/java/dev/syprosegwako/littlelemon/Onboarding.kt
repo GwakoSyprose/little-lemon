@@ -74,7 +74,7 @@ fun Onboarding(navController: NavController) {
         Modifier
             .fillMaxSize()
             .background(color = Color.White)
-            .padding(40.dp)
+            .padding(vertical = 40.dp)
     ) {
         //logo
         Logo(modifier = Modifier.align(Alignment.CenterHorizontally))
@@ -87,7 +87,7 @@ fun Onboarding(navController: NavController) {
             modifier = Modifier
                 .fillMaxWidth()
                 .background(colorResource(id = R.color.primary1))
-                .padding(16.dp)
+                .padding(40.dp)
                 .wrapContentSize(Alignment.Center)
         )
 
@@ -97,7 +97,7 @@ fun Onboarding(navController: NavController) {
             textAlign = TextAlign.Start,
             style = paragraphTitleTextStyle,
             color = colorResource(id = R.color.black),
-            modifier = Modifier.padding(vertical = 40.dp)
+            modifier = Modifier.padding(40.dp)
 
         )
         //form
@@ -131,7 +131,7 @@ fun Onboarding(navController: NavController) {
         Button(
             colors = ButtonDefaults.buttonColors(colorResource(id = R.color.primary2)),
             shape = RoundedCornerShape(8.dp),
-            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+            modifier = Modifier.fillMaxWidth().padding(40.dp),
             onClick = { processRegistration() }
         )
         {
@@ -167,7 +167,7 @@ fun GenericTextField(
     readOnly: Boolean = false,
     keyboardType: KeyboardType = KeyboardType.Text
 ) {
-    Column {
+    Column(modifier = Modifier.padding(horizontal = 40.dp)) {
         Text(
             text = label,
             modifier = Modifier.fillMaxWidth(),
