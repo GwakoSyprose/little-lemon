@@ -1,6 +1,10 @@
 # Little Lemon
 Little lemon is a food ordering app for Little lemon restaurant.
 
+## Wireframes
+![image](https://github.com/user-attachments/assets/4d86da75-0bc7-4455-be85-27216fb2fc4f)
+
+
 ## Onboarding Screen
 ![image](https://github.com/user-attachments/assets/80cf2994-c013-4c2a-9890-60bc72dd8ffe)
 
